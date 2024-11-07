@@ -55,7 +55,7 @@ const handler = async (req: Request): Promise<Response> => {
       const book = await fromModelToBook(bookDB)
     return new Response(JSON.stringify(book))
     }
-  }else if(method === "PHOST"){
+  }else if(method === "POST"){
     if(path === "/user"){
       const user = await req.json();
       if(!user.name || !user.age || !user.email){
